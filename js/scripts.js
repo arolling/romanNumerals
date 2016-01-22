@@ -9,7 +9,7 @@ var breakDown = function(number) {
       var remainder = number % arabicBases[i];
       number = remainder;
       for (var j = 0; j < quantity; j++) {
-        romanNumeral = romanNumeral + romanBases[i];
+        romanNumeral += romanBases[i];
       }
     }
   }
@@ -17,7 +17,6 @@ var breakDown = function(number) {
 }
 
 var moreThanThree = function(rawNumerals) {
-  var romanBases = ["M", "D", "C", "L", "X", "V", "I"];
   if (rawNumerals.includes('VIIII')) {
     rawNumerals = rawNumerals.replace(/viiii/gi, 'IX');
   }
@@ -61,7 +60,5 @@ $(document).ready(function() {
     //window.location.href ="disemvowelled.html";
     $(".output").text(romanNumber);
     //alert(endPhrase);
-
-
   });
 });
