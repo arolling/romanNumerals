@@ -1,6 +1,7 @@
 # Roman Numeral Converter
 
-#### Converts arabic numbers into Roman Numerals
+#### Converts arabic numbers into Roman Numerals, January 21/2016
+### Updated January 22 by Abby
 
 #### By Abby Rolling and Molly Curtin
 
@@ -10,7 +11,7 @@ This will take a number from the user and output the equivalent in Roman Numeral
 
 ## Known Bugs
 
-Does not handle 4,9,40, etc cases; does not have a functioning error message for numbers greater than 3999.
+None!
 
 ## Technologies Used
 

@@ -41,7 +41,7 @@ var moreThanThree = function(rawNumerals) {
 
 var romanConverter = function(number){
   if (number > 3999) {
-    return "error";
+    return "Please enter a number below 4000; the Romans did not think big";
   }
   var rawNumerals = breakDown(number);
   if (rawNumerals.includes('IIII') || rawNumerals.includes('XXXX') || rawNumerals.includes('CCCC')) {
