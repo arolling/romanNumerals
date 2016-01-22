@@ -16,9 +16,27 @@ var breakDown = function(number) {
   return romanNumeral;
 }
 
-var moreThanThree = function(numeral) {
+var moreThanThree = function(rawNumerals) {
   var romanBases = ["M", "D", "C", "L", "X", "V", "I"];
-  return numeral;
+  if (rawNumerals.includes('VIIII')) {
+    rawNumerals = rawNumerals.replace(/viiii/gi, 'IX');
+  }
+  if (rawNumerals.includes('IIII')) {
+    rawNumerals = rawNumerals.replace(/iiii/gi, 'IV');
+  }
+  if (rawNumerals.includes('LXXXX')) {
+    rawNumerals = rawNumerals.replace(/lxxxx/gi, 'XC');
+  }
+  if (rawNumerals.includes('XXXX')) {
+    rawNumerals = rawNumerals.replace(/xxxx/gi, 'XL');
+  }
+  if (rawNumerals.includes('DCCCC')) {
+    rawNumerals = rawNumerals.replace(/dcccc/gi, 'CM');
+  }
+  if (rawNumerals.includes('CCCC')) {
+    rawNumerals = rawNumerals.replace(/cccc/gi, 'CD');
+  }
+  return rawNumerals;
 }
 
 var romanConverter = function(number){
